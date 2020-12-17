@@ -1,0 +1,2 @@
+class BreakupMessagesController < ApplicationController
+end
