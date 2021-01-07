@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_12_17_160019) do
 
   create_table "breakup_messages", force: :cascade do |t|
     t.string "message"
+    t.string "theme"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
