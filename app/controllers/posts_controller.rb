@@ -31,9 +31,9 @@ class PostsController < ApplicationController
         end  
     end
 
-    def destory
+    def destroy
         post = Post.find(params[:id])
-        post.destory
+        post.destroy
 
         render json: post
     end

@@ -31,9 +31,9 @@ class CommentsController < ApplicationController
         end  
     end
 
-    def destory
+    def destroy
         comment = Comment.find(params[:id])
-        comment.destory
+        comment.destroy
 
         render json: comment
     end

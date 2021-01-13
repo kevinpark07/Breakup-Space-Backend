@@ -31,9 +31,9 @@ class UsersController < ApplicationController
         end  
     end
 
-    def destory
+    def destroy
         user = User.find(params[:id])
-        user.destory
+        user.destroy
 
         render json: user
     end

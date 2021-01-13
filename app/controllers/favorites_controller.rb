@@ -22,9 +22,9 @@ class FavoritesController < ApplicationController
     end
 
 
-    def destory
+    def destroy
         favorite = Favorite.find(params[:id])
-        favorite.destory
+        favorite.destroy
 
         render json: favorite
     end
