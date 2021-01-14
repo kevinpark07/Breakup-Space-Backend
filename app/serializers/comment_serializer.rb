@@ -1,4 +1,4 @@
 class CommentSerializer < ActiveModel::Serializer
-  attributes :id, :content, :date, :time, :user
+  attributes :id, :content, :date, :time, :user, :post
 
 end
