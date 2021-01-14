@@ -17,7 +17,7 @@ user1 = User.create(name: 'Sam', email: 's@gmail.com', username: 'sl3', password
 
 post = Post.create(title: 'HELP ME', content: "He is too nice and I don't want to hurt him." , date: "2020-12-24", time: "20:10:00", up_votes: 5, user: user)
 
-comment = Comment.create(content: "Just cut it. It will feel better.", date: "2020-12-29", time: "18:10:22", user: user1, post: post)
+comment = Comment.create(content: "Just cut it. It will feel better.", date: "2020-12-29", up_votes: 2, time: "18:10:22", user: user1, post: post)
 
 message = BreakupMessage.create(message: "Hey there, it was great to meet you, but I want to be honest and let you know I just didn't feel the kind of connection I'm looking for. Best of luck with everything.", theme: "Not feeling a connection")
 message1 = BreakupMessage.create(message: "Hi! I've really enjoyed getting to know you but I'm not feeling a romantic connection with you. Thanks again for the other night and hope you find what you're looking for!", theme: "Getting a friendship vibe")

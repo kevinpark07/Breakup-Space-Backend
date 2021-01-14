@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_12_17_160019) do
     t.string "content"
     t.date "date"
     t.time "time"
+    t.integer "up_votes"
     t.bigint "user_id", null: false
     t.bigint "post_id", null: false
     t.datetime "created_at", precision: 6, null: false

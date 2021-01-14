@@ -5,6 +5,7 @@ class CreateComments < ActiveRecord::Migration[6.0]
       t.string :content
       t.date :date
       t.time :time
+      t.integer :up_votes
       t.belongs_to :user, null: false, foreign_key: true
       t.belongs_to :post, null: false, foreign_key: true
 
