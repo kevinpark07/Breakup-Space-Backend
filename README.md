@@ -1,24 +1,24 @@
-# README
+# Breakup Space
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The antithesis of ghosting. The webite provides users with templated "breakup" texts that make it much easier to breakup with ghosting.
 
-Things you may want to cover:
+Save a heart, send a text.
 
-* Ruby version
+## Try It Live
 
-* System dependencies
+Coming soon ... Site is currently being developed!
 
-* Configuration
+## Dev Tools
 
-* Database creation
+#### [Frontend](https://github.com/kevinpark07/BreakUp-Space-Frontend)
 
-* Database initialization
+- React
+- Redux
+- Material UI
+- Styled-Components
 
-* How to run the test suite
+#### Backend
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Ruby on Rails
+- PostgreSQL
+- Active Model Serializers
