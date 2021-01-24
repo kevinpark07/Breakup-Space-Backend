@@ -16,6 +16,7 @@ user = User.create(name: 'Kevin', email: 'k@gmail.com', username: 'kl3', passwor
 user1 = User.create(name: 'Sam', email: 's@gmail.com', username: 'sl3', password: '123', profile_image: 'image', age: 30, relationship_status: 'asdf')
 
 post = Post.create(title: 'HELP ME', content: "He is too nice and I don't want to hurt him." , date: "2020-12-24", time: "20:10:00", up_votes: 5, user: user)
+post1 = Post.create(title: "I Just Don't Know", content: "I'm just not having fun anymore..." , date: "2021-01-17", time: "18:10:00", up_votes: 6, user: user1)
 
 comment = Comment.create(content: "Just cut it. It will feel better.", date: "2020-12-29", up_votes: 2, time: "18:10:22", user: user1, post: post)
 
