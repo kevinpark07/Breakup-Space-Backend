@@ -37,5 +37,8 @@ message13 = BreakupMessage.create(message: "Hey there. While it's been great get
 message14= BreakupMessage.create(message: "Hi (insert name here). This is not ideal, but I've been thinking a lot and am not really as ready as I thought I'd be to date. I really enjoyed meeting you and hope you understand.", theme: "Not ready for a relationship right now")
 
 
-
-favorite = Favorite.create(user: user1, breakup_message: message)
+favorite1 = Favorite.create(user: user1, breakup_message: message)
+favorite2 = Favorite.create(user: user1, breakup_message: message3)
+favorite3 = Favorite.create(user: user1, breakup_message: message4)
+favorite4 = Favorite.create(user: user1, breakup_message: message12)
+favorite5 = Favorite.create(user: user1, breakup_message: message14)
