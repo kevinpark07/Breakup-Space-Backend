@@ -1,5 +1,4 @@
 class BreakupMessagesController < ApplicationController
-
     def index
         messages = BreakupMessage.all
         render json: messages
@@ -9,6 +8,4 @@ class BreakupMessagesController < ApplicationController
         message = BreakupMessage.find(params[:id])
         render json: message
     end
-
-
 end

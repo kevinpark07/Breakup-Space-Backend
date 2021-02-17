@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :quizzes, only: [:index]
+  resources :topics, only: [:index]
+  resources :quizzes, only: [:index]
   resources :favorites, only: [:index, :show, :create, :destroy]
   resources :breakup_messages, only: [:index, :show]
   resources :comments, except: [:new, :edit]
