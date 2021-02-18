@@ -22,10 +22,10 @@ post1 = Post.create(title: "I Just Don't Know", content: "I'm just not having fu
 
 comment = Comment.create(content: "Just cut it. It will feel better.", date: "2020-12-29", up_votes: 2, time: "18:10:22", user: user1, post: post)
 
-theme1 = Topic.create(theme: 'Not ready to date')
-theme2 = Topic.create(theme: 'Bad timing')
-theme3 = Topic.create(theme: 'Friendzone')
-theme4 = Topic.create(theme: 'No connection')
+theme1 = Topic.create(theme: 'not ready to date')
+theme2 = Topic.create(theme: 'bad timing')
+theme3 = Topic.create(theme: 'friendzone')
+theme4 = Topic.create(theme: 'no connection')
 
 Quiz.create(topic: theme1, question: 'What’s the reason you’re not ready?', answers: 'Just got out of relationship| We want different things |Don’t want to get too serious')
 Quiz.create(topic: theme1, question: 'What vibe do you want?-  Describe your text vibe.', answers: 'Casual| Friendly & Bubbly| Direct')
