@@ -36,6 +36,16 @@ Quiz.create(topic: theme4, question: 'What’s the reason you’re not feeling a
 Quiz.create(topic: theme4, question: "What’s the reason they made you feel uncomfortable?", answers: "Something they said| Inappropriate behavior/physical behavior| Rude/inconsiderate")
 Quiz.create(topic: theme4, question: 'How many dates have you been on?- Hey what’s your number?', answers: '1-2| 2-4| 5')
 
+Quiz.create(topic: theme3, question: 'What vibe do you want?-  Describe your text vibe.', answers: 'Casual| Friendly & Bubbly| Direct')
+Quiz.create(topic: theme3, question: 'Any physical contact?- Tell us more, tell us more. Did you get very far? P.s. consent is hot', answers: "No physical contact| Holding Hands| Kissing| Hot & heavy")
+Quiz.create(topic: theme3, question: 'What’s this person’s vibe?', answers: 'Relaxed| Always smiling| Serious')
+
+Quiz.create(topic: theme2, question: 'What’s the reason you’re not ready?', answers: 'Work| Focus on yourself')
+Quiz.create(topic: theme2, question: 'How many dates have you been on?- Hey what’s your number?', answers: '1-2| 2-4| 5')
+Quiz.create(topic: theme2, question: 'How do you feel about breaking things off?', answers: 'Indifferent| Happy/Relieved| Sad')
+Quiz.create(topic: theme2, question: 'What’s this person’s vibe?', answers: 'Relaxed| Always smiling| Serious')
+
+
 message1 = BreakupMessage.create(topic: theme1, tone: 'casual', subject: 'nothing serious', message: "Hi (insert name here). This is not ideal, but I'm just not really as ready as I thought I'd be to date. I really enjoyed meeting you and hope you understand.")
 message2 = BreakupMessage.create(topic: theme1, tone: 'friendly', subject: 'nothing serious', message: "Hey, hope you're doing well. I just wanted to reach out and say while I had a great time getting to know you, I realized I'm just not ready to date right now. Thanks again for a fun time!")
 message3 = BreakupMessage.create(topic: theme1, tone: 'direct', subject: 'nothing serious', message: "Hey. I've been thinking for the past couple of days and unfortunately I'm just not in a place to be in a relationship right now. With everything going on in my life at the moment, I need to focus on myself.")
@@ -51,6 +61,18 @@ message11 = BreakupMessage.create(topic: theme4, tone: 'uncomfortable', subject:
 message12 = BreakupMessage.create(topic: theme4, tone: 'uncomfortable', subject: 'personality', message: "Hi, I want to be honest with you. I do not see us going any further. Thanks for understanding.")
 message13 = BreakupMessage.create(topic: theme4, tone: 'casual', subject: "no future", message: "Hey there, it was great to meet you, but I want to be honest and let you know I just didn't feel the kind of connection I'm looking for. Best of luck with everything!")
 message14 = BreakupMessage.create(topic: theme4, tone: 'friendly', subject: "no future", message: "Hi! I had so much fun with you on our last date but at this time, I don't see this going further. I enjoyed spending time with you but the connection just isn't there for me. Hope you understand")
+message15 = BreakupMessage.create(topic: theme4, tone: 'direct', subject: "no future", message: "Hey. While I enjoyed our date, I'm unfortunately not feeling a connection with you. I feel like we're in different places in our lives right now and don't think it makes sense to continue this right now. I hope you find what you're looking for.")
+
+message16 = BreakupMessage.create(topic: theme3, tone: 'casual', message: "Hey. I had a lot of fun with you the other day but I'm not feeling a romantic connection with you. Let me know if you want to get together again as friends :)")
+message17 = BreakupMessage.create(topic: theme3, tone: 'friendly', message: "Hi! The last thing I want to do is hurt you but feel like I need to be honest. I've really enjoyed getting to know you but only seeing this going as far as friends. I would love to be friends if you are down too. Either way I hope you can understand.")
+message18 = BreakupMessage.create(topic: theme3, tone: 'direct', message: "Hi, thanks again for the other night. I feel like I need to be honest with you, I really enjoy hanging out with you but see us more as friends. It has been great getting to know you and hope you understand.")
+
+message19 = BreakupMessage.create(topic: theme2, tone: 'casual', subject: 'yourself', message: "Hey, it's been fun getting to know each other, but I'm realizing I am just too swamped to make the time I'd like for dating right now. Thanks for understanding!")
+message20 = BreakupMessage.create(topic: theme2, tone: 'friendly', subject: 'yourself', message: "Hi! I had an awesome time with you the other night but I'm not in the place right now to be dating anyone. I have a lot going on at the moment and need to take time to focus on myself. It was really nice meeting you though!")
+message21 = BreakupMessage.create(topic: theme2, tone: 'direct', subject: 'yourself', message: "Hey (insert name here), I really enjoyed getting to know you and spending time with you, but I'm realizing this time of my life right now I cannot make the time I'd like for dating. Thank you for understanding and I wish you nothing but the best.")
+message22 = BreakupMessage.create(topic: theme2, tone: 'casual', subject: 'work', message: "Hey, it's been fun getting to know each other, but I'm realizing I am just too swamped at work to to date right now. Thanks for understanding!")
+message23 = BreakupMessage.create(topic: theme2, tone: 'friendly', subject: 'work', message: "Hey. It's been great getting to know you over the past couple of dates. But with my work schedule I don't have time to be dating anyone right now. I hope you understand!")
+message24 = BreakupMessage.create(topic: theme2, tone: 'direct', subject: 'work', message: "Hey (insert name here). I really enjoyed getting to know you and spending time with you, but my work schedule is picking up and I unfortunately don't have the time I would like to date anyone right now. Thank you for understanding and I hope you find what you are looking for.")
 
 favorite1 = Favorite.create(user: user1, breakup_message: message1)
 favorite2 = Favorite.create(user: user1, breakup_message: message3)
