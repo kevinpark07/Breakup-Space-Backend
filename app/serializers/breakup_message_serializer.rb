@@ -1,4 +1,4 @@
 class BreakupMessageSerializer < ActiveModel::Serializer
-  attributes :id, :message, :tone, :subject
-  
+  attributes :id, :message, :tone, :subject, :topic
+
 end
