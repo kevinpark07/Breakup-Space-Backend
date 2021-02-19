@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Favorite.destroy_all
 User.destroy_all
 Post.destroy_all
 Comment.destroy_all
 BreakupMessage.destroy_all
-Favorite.destroy_all
 Quiz.destroy_all
 Topic.destroy_all
 
@@ -46,15 +46,15 @@ Quiz.create(topic: theme2, question: 'How do you feel about breaking things off?
 Quiz.create(topic: theme2, question: 'What’s this person’s vibe?', answers: 'Relaxed| Always smiling| Serious')
 
 
-message1 = BreakupMessage.create(topic: theme1, tone: 'casual', subject: 'nothing serious', message: "Hi (insert name here). This is not ideal, but I'm just not really as ready as I thought I'd be to date. I really enjoyed meeting you and hope you understand.")
-message2 = BreakupMessage.create(topic: theme1, tone: 'friendly', subject: 'nothing serious', message: "Hey, hope you're doing well. I just wanted to reach out and say while I had a great time getting to know you, I realized I'm just not ready to date right now. Thanks again for a fun time!")
-message3 = BreakupMessage.create(topic: theme1, tone: 'direct', subject: 'nothing serious', message: "Hey. I've been thinking for the past couple of days and unfortunately I'm just not in a place to be in a relationship right now. With everything going on in my life at the moment, I need to focus on myself.")
-message4 = BreakupMessage.create(topic: theme1, tone: 'casual', subject: 'different things', message: "Hey there. I feel like we're looking for different things and it wouldn’t be fair for me to lead you on. Hope you understand.")
-message5 = BreakupMessage.create(topic: theme1, tone: 'friendly', subject: 'different things', message: "Hey (insert name here). I had so much fun hanging with you, but I think we're looking for different things. I hope you can understand and find what you are looking for.")
-message6 = BreakupMessage.create(topic: theme1, tone: 'direct', subject: 'different things', message: "Hey (insert name here). While it's been great getting to know you, I think we're looking for different things. I'm not ready for anything serious at the moment and I don't want to lead you on. Hope you understand.")
-message7 = BreakupMessage.create(topic: theme1, tone: 'casual', subject: 'just got out', message: "Hey. I just got out of something and am just not looking to date right now. Thank you for understanding.")
-message8 = BreakupMessage.create(topic: theme1, tone: 'friendly', subject: 'just got out', message: "Hey (insert name here). I really enjoyed getting to know you and you deserve the best. I just got out of a relationship recently and realized I am just not ready to date yet. I am sorry to tell you over text and hope you can understand.")
-message9 = BreakupMessage.create(topic: theme1, tone: 'direct', subject: 'just got out', message: "Hey (insert name here). I had a good time with you, but I recently just got out of a relationship and realized I'm just not ready to date. Wish you all the best.")
+message1 = BreakupMessage.create(topic: theme1, tone: 'casual', subject: 'don’t want to get too serious', message: "Hi (insert name here). This is not ideal, but I'm just not really as ready as I thought I'd be to date. I really enjoyed meeting you and hope you understand.")
+message2 = BreakupMessage.create(topic: theme1, tone: 'friendly', subject: 'don’t want to get too serious', message: "Hey, hope you're doing well. I just wanted to reach out and say while I had a great time getting to know you, I realized I'm just not ready to date right now. Thanks again for a fun time!")
+message3 = BreakupMessage.create(topic: theme1, tone: 'direct', subject: 'don’t want to get too serious', message: "Hey. I've been thinking for the past couple of days and unfortunately I'm just not in a place to be in a relationship right now. With everything going on in my life at the moment, I need to focus on myself.")
+message4 = BreakupMessage.create(topic: theme1, tone: 'casual', subject: 'we want different things', message: "Hey there. I feel like we're looking for different things and it wouldn’t be fair for me to lead you on. Hope you understand.")
+message5 = BreakupMessage.create(topic: theme1, tone: 'friendly', subject: 'we want different things', message: "Hey (insert name here). I had so much fun hanging with you, but I think we're looking for different things. I hope you can understand and find what you are looking for.")
+message6 = BreakupMessage.create(topic: theme1, tone: 'direct', subject: 'we want different things', message: "Hey (insert name here). While it's been great getting to know you, I think we're looking for different things. I'm not ready for anything serious at the moment and I don't want to lead you on. Hope you understand.")
+message7 = BreakupMessage.create(topic: theme1, tone: 'casual', subject: 'just got out of relationship', message: "Hey. I just got out of something and am just not looking to date right now. Thank you for understanding.")
+message8 = BreakupMessage.create(topic: theme1, tone: 'friendly', subject: 'just got out of relationship', message: "Hey (insert name here). I really enjoyed getting to know you and you deserve the best. I just got out of a relationship recently and realized I am just not ready to date yet. I am sorry to tell you over text and hope you can understand.")
+message9 = BreakupMessage.create(topic: theme1, tone: 'direct', subject: 'just got out of relationship', message: "Hey (insert name here). I had a good time with you, but I recently just got out of a relationship and realized I'm just not ready to date. Wish you all the best.")
 
 message10 = BreakupMessage.create(topic: theme4, tone: 'uncomfortable', subject: 'statement', message: "Hi, I want to be honest with you. What you said on our date was not okay. I do not see this going anywhere. Thanks for understanding.")
 message11 = BreakupMessage.create(topic: theme4, tone: 'uncomfortable', subject: 'behavior', message: "Hi, I want to be honest with you. What you did on our date was not okay and made me very uncomfortable. I do not see this going anywhere and please do not contact me.")
@@ -67,9 +67,9 @@ message16 = BreakupMessage.create(topic: theme3, tone: 'casual', message: "Hey. 
 message17 = BreakupMessage.create(topic: theme3, tone: 'friendly', message: "Hi! The last thing I want to do is hurt you but feel like I need to be honest. I've really enjoyed getting to know you but only seeing this going as far as friends. I would love to be friends if you are down too. Either way I hope you can understand.")
 message18 = BreakupMessage.create(topic: theme3, tone: 'direct', message: "Hi, thanks again for the other night. I feel like I need to be honest with you, I really enjoy hanging out with you but see us more as friends. It has been great getting to know you and hope you understand.")
 
-message19 = BreakupMessage.create(topic: theme2, tone: 'casual', subject: 'yourself', message: "Hey, it's been fun getting to know each other, but I'm realizing I am just too swamped to make the time I'd like for dating right now. Thanks for understanding!")
-message20 = BreakupMessage.create(topic: theme2, tone: 'friendly', subject: 'yourself', message: "Hi! I had an awesome time with you the other night but I'm not in the place right now to be dating anyone. I have a lot going on at the moment and need to take time to focus on myself. It was really nice meeting you though!")
-message21 = BreakupMessage.create(topic: theme2, tone: 'direct', subject: 'yourself', message: "Hey (insert name here), I really enjoyed getting to know you and spending time with you, but I'm realizing this time of my life right now I cannot make the time I'd like for dating. Thank you for understanding and I wish you nothing but the best.")
+message19 = BreakupMessage.create(topic: theme2, tone: 'casual', subject: 'focus on yourself', message: "Hey, it's been fun getting to know each other, but I'm realizing I am just too swamped to make the time I'd like for dating right now. Thanks for understanding!")
+message20 = BreakupMessage.create(topic: theme2, tone: 'friendly', subject: 'focus on yourself', message: "Hi! I had an awesome time with you the other night but I'm not in the place right now to be dating anyone. I have a lot going on at the moment and need to take time to focus on myself. It was really nice meeting you though!")
+message21 = BreakupMessage.create(topic: theme2, tone: 'direct', subject: 'focus on yourself', message: "Hey (insert name here), I really enjoyed getting to know you and spending time with you, but I'm realizing this time of my life right now I cannot make the time I'd like for dating. Thank you for understanding and I wish you nothing but the best.")
 message22 = BreakupMessage.create(topic: theme2, tone: 'casual', subject: 'work', message: "Hey, it's been fun getting to know each other, but I'm realizing I am just too swamped at work to to date right now. Thanks for understanding!")
 message23 = BreakupMessage.create(topic: theme2, tone: 'friendly', subject: 'work', message: "Hey. It's been great getting to know you over the past couple of dates. But with my work schedule I don't have time to be dating anyone right now. I hope you understand!")
 message24 = BreakupMessage.create(topic: theme2, tone: 'direct', subject: 'work', message: "Hey (insert name here). I really enjoyed getting to know you and spending time with you, but my work schedule is picking up and I unfortunately don't have the time I would like to date anyone right now. Thank you for understanding and I hope you find what you are looking for.")
