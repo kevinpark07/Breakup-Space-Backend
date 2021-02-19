@@ -32,7 +32,7 @@ Quiz.create(topic: theme1, question: 'What vibe do you want?-  Describe your tex
 Quiz.create(topic: theme1, question: 'How many dates have you been on?- Hey what’s your number?', answers: '1-2| 2-4| 5')
 Quiz.create(topic: theme1, question: 'What’s this person’s vibe?', answers: 'Relaxed| Always smiling| Serious')
 
-Quiz.create(topic: theme4, question: 'What’s the reason you’re not feeling a connection?', answers: "Just not feeling it/We're in different places| Made me feel uncomfortable")
+Quiz.create(topic: theme4, question: 'What’s the reason you’re not feeling a connection?', answers: "Just not feeling it| Made me feel uncomfortable")
 Quiz.create(topic: theme4, question: "What’s the reason they made you feel uncomfortable?", answers: "Something they said| Inappropriate behavior/physical behavior| Rude/inconsiderate")
 Quiz.create(topic: theme4, question: 'How many dates have you been on?- Hey what’s your number?', answers: '1-2| 2-4| 5')
 
@@ -59,9 +59,9 @@ message9 = BreakupMessage.create(topic: theme1, tone: 'direct', subject: 'just g
 message10 = BreakupMessage.create(topic: theme4, tone: 'uncomfortable', subject: 'statement', message: "Hi, I want to be honest with you. What you said on our date was not okay. I do not see this going anywhere. Thanks for understanding.")
 message11 = BreakupMessage.create(topic: theme4, tone: 'uncomfortable', subject: 'behavior', message: "Hi, I want to be honest with you. What you did on our date was not okay and made me very uncomfortable. I do not see this going anywhere and please do not contact me.")
 message12 = BreakupMessage.create(topic: theme4, tone: 'uncomfortable', subject: 'personality', message: "Hi, I want to be honest with you. I do not see us going any further. Thanks for understanding.")
-message13 = BreakupMessage.create(topic: theme4, tone: 'casual', subject: "no future", message: "Hey there, it was great to meet you, but I want to be honest and let you know I just didn't feel the kind of connection I'm looking for. Best of luck with everything!")
-message14 = BreakupMessage.create(topic: theme4, tone: 'friendly', subject: "no future", message: "Hi! I had so much fun with you on our last date but at this time, I don't see this going further. I enjoyed spending time with you but the connection just isn't there for me. Hope you understand")
-message15 = BreakupMessage.create(topic: theme4, tone: 'direct', subject: "no future", message: "Hey. While I enjoyed our date, I'm unfortunately not feeling a connection with you. I feel like we're in different places in our lives right now and don't think it makes sense to continue this right now. I hope you find what you're looking for.")
+message13 = BreakupMessage.create(topic: theme4, tone: 'casual', subject: "just not feeling it", message: "Hey there, it was great to meet you, but I want to be honest and let you know I just didn't feel the kind of connection I'm looking for. Best of luck with everything!")
+message14 = BreakupMessage.create(topic: theme4, tone: 'friendly', subject: "just not feeling it", message: "Hi! I had so much fun with you on our last date but at this time, I don't see this going further. I enjoyed spending time with you but the connection just isn't there for me. Hope you understand")
+message15 = BreakupMessage.create(topic: theme4, tone: 'direct', subject: "just not feeling it", message: "Hey. While I enjoyed our date, I'm unfortunately not feeling a connection with you. I feel like we're in different places in our lives right now and don't think it makes sense to continue this right now. I hope you find what you're looking for.")
 
 message16 = BreakupMessage.create(topic: theme3, tone: 'casual', message: "Hey. I had a lot of fun with you the other day but I'm not feeling a romantic connection with you. Let me know if you want to get together again as friends :)")
 message17 = BreakupMessage.create(topic: theme3, tone: 'friendly', message: "Hi! The last thing I want to do is hurt you but feel like I need to be honest. I've really enjoyed getting to know you but only seeing this going as far as friends. I would love to be friends if you are down too. Either way I hope you can understand.")
