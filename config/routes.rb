@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sms_messages, only: [:index, :create]
   resources :quizzes, only: [:index]
   resources :topics, only: [:index]
   resources :quizzes, only: [:index]

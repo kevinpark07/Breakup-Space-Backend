@@ -23,6 +23,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#Twilio gem
+gem 'twilio-ruby'
+
 #Use Serializers to format your JSON without having to lift a finger on the frontend
 gem 'active_model_serializers'
 # Use Active Storage variant
