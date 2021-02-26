@@ -2,11 +2,6 @@
 require 'twilio-ruby'
 require './environment'
 
-#create SmsMessage migration table, controller, model
-#attributes user_number, message
-#post request is all we need
-#hide account_sid and auth_token and twilio number in ENV file refer to The Thread
-
 class SmsMessagesController < ApplicationController
 
     def create
@@ -14,14 +9,14 @@ class SmsMessagesController < ApplicationController
         client = Twilio::REST::Client.new(ACCOUNT_SID, AUTH_TOKEN)
 
         to = sms_message_params['user_number'] # Your mobile phone number
-        message = sms_message_params['message']
-        client.messages.create(
+        sms = sms_message_params['message']
+        message = client.messages.create(
         from: TWILIO_NUMBER,
         to: to,
-        body: message
+        body: sms
         )
-
-        render json: 'success'
+    
+        render json: message
     end
 
     private
