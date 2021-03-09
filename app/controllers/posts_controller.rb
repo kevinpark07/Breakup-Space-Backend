@@ -11,6 +11,8 @@ class PostsController < ApplicationController
     end
 
     def create
+        # updated_date = Date.strptime(params[:date], '%Y-%m-%d')
+        # title: params[:title], content: params[:content], date: updated_date.strftime('%m/%d/%Y'), time: params[:time], up_vote: params[:up_votes], user_id: params[:user_id]
         post = Post.create(post_params)
         
         if post.save
@@ -33,6 +35,7 @@ class PostsController < ApplicationController
 
     def destroy
         post = Post.find(params[:id])
+
         post.destroy
 
         render json: post

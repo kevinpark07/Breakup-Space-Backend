@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2021_02_24_014136) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
+    t.string "image"
     t.string "content"
     t.date "date"
     t.time "time"
