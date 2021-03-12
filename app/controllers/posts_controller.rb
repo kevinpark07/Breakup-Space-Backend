@@ -11,9 +11,9 @@ class PostsController < ApplicationController
     end
 
     def create
-        # updated_date = Date.strptime(params[:date], '%Y-%m-%d')
-        # title: params[:title], content: params[:content], date: updated_date.strftime('%m/%d/%Y'), time: params[:time], up_vote: params[:up_votes], user_id: params[:user_id]
-        post = Post.create(post_params)
+        image = Cloudinary::Uploader.upload(params[:image])
+        user = User.find(params[:user_id]) 
+        post = Post.create(title: params[:title], content: params[:content], date: params[:date], up_votes: 0, user: user, image: image["url"])
         
         if post.save
             render json: post
@@ -44,6 +44,6 @@ class PostsController < ApplicationController
     private
     
     def post_params
-        params.require(:post).permit(:title, :content, :date, :up_votes, :user_id)
+        params.require(:post).permit(:title, :content, :date, :image, :up_votes, :user_id)
     end
 end
