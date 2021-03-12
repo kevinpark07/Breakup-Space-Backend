@@ -4,8 +4,7 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :image
       t.string :content
-      t.date :date
-      t.time :time
+      t.string :date
       t.integer :up_votes
       t.belongs_to :user, null: false, foreign_key: true
 

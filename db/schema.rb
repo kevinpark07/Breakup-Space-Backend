@@ -27,8 +27,7 @@ ActiveRecord::Schema.define(version: 2021_02_24_014136) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
-    t.date "date"
-    t.time "time"
+    t.string "date"
     t.integer "up_votes"
     t.bigint "user_id", null: false
     t.bigint "post_id", null: false
@@ -51,8 +50,7 @@ ActiveRecord::Schema.define(version: 2021_02_24_014136) do
     t.string "title"
     t.string "image"
     t.string "content"
-    t.date "date"
-    t.time "time"
+    t.string "date"
     t.integer "up_votes"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
