@@ -11,7 +11,7 @@ class FavoritesController < ApplicationController
 
     def create
         favorite = Favorite.create(favorite_params)
-        
+         
         if favorite.save
             render json: favorite
         else
@@ -30,7 +30,7 @@ class FavoritesController < ApplicationController
     private
     
     def favorite_params
-        params.require(:comment).permit(:breakup_message_id, :user_id)
+        params.require(:favorite).permit(:breakup_message_id, :user_id)
     end
 
 
