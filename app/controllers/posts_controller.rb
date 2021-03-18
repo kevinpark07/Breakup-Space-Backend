@@ -11,9 +11,14 @@ class PostsController < ApplicationController
     end
 
     def create
-        image = Cloudinary::Uploader.upload(params[:image])
         user = User.find(params[:user_id]) 
-        post = Post.create(title: params[:title], content: params[:content], date: params[:date], up_votes: 0, user: user, image: image["url"])
+        
+        if params[:image].empty?
+            post = Post.create(title: params[:title], content: params[:content], date: params[:date], up_votes: 0, user: user)
+        else
+            image = Cloudinary::Uploader.upload(params[:image])
+            post = Post.create(title: params[:title], content: params[:content], date: params[:date], up_votes: 0, user: user, image: image["url"])
+        end
         
         if post.save
             render json: post
