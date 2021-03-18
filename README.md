@@ -10,7 +10,7 @@ Coming soon ... Site is currently being developed!
 
 ## Dev Tools
 
-#### [Frontend](https://github.com/kevinpark07/BreakUp-Space-Frontend)
+#### [Frontend](https://github.com/slurio/BreakUp-Space-Frontend)
 
 - React
 - Redux
