@@ -11,15 +11,13 @@ class UsersController < ApplicationController
     end
 
     def create
-        if params[:profile_image].empty?
-            image = 'https://res.cloudinary.com/breakupspace/image/upload/v1616445053/Profile_lvecac.png'
-            user = User.create(name: params[:name], email: params[:email], username: params[:username], password: params[:password], profile_image: image)
-        else
+        if params[:profile_image] != ''
             image = Cloudinary::Uploader.upload(params[:profile_image])
             user = User.create(name: params[:name], email: params[:email], username: params[:username], password: params[:password], profile_image: image["url"])
+        else
+            user = User.create(name: params[:name], email: params[:email], username: params[:username], password: params[:password], profile_image: 'https://res.cloudinary.com/breakupspace/image/upload/v1616445053/Profile_lvecac.png')
         end
         
-
         if user.save
             render json: user
         else
