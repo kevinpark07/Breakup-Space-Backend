@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
     def create
         user = User.find(params[:user_id]) 
-
+        byebug
         if params[:image] != ''
             image = Cloudinary::Uploader.upload(params[:image])
             if params[:content].empty?
@@ -33,7 +33,17 @@ class PostsController < ApplicationController
 
     def update
         post = Post.find(params[:id])
-        post.update(post_params)
+        
+        if params[:image] != ''
+            image = Cloudinary::Uploader.upload(params[:image])
+            if params[:content].empty?
+                post.update(title: params[:title], date: params[:date], up_votes: 0, user: user, image: image["url"])    
+            else 
+                post.update(title: params[:title], content: params[:content], date: params[:date], up_votes: 0, user: user, image: image["url"])    
+            end
+        elsif params[:image].empty?
+            post.update(title: params[:title], content: params[:content], date: params[:date], up_votes: 0, user: user)            
+        end
 
         if post.save
             render json: post

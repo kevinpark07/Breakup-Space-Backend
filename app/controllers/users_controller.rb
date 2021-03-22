@@ -11,8 +11,15 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.create(user_params)
+        if params[:profile_image].empty?
+            image = 'https://res.cloudinary.com/breakupspace/image/upload/v1616445053/Profile_lvecac.png'
+            user = User.create(name: params[:name], email: params[:email], username: params[:username], password: params[:password], profile_image: image)
+        else
+            image = Cloudinary::Uploader.upload(params[:profile_image])
+            user = User.create(name: params[:name], email: params[:email], username: params[:username], password: params[:password], profile_image: image["url"])
+        end
         
+
         if user.save
             render json: user
         else
@@ -22,7 +29,13 @@ class UsersController < ApplicationController
 
     def update
         user = User.find(params[:id])
-        user.update(user_params)
+        
+        if(params[:image])
+            profile_image = Cloudinary::Uploader.upload(params[:profile_image])
+            user.update(name: params[:name], email: params[:email], username: params[:username], password: params[:password], profile_image: profile_image["url"])
+        else
+            user.update(user_params)
+        end
 
         if user.save
             render json: user
@@ -41,7 +54,7 @@ class UsersController < ApplicationController
     private
     
     def user_params
-        params.require(:user).permit(:name, :email, :username, :password, :profile_image, :age, :relationship_status)
+        params.require(:user).permit(:name, :email, :username, :password, :profile_image)
     end
     
 end
