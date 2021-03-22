@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :email, :password, :age, :username, :profile_image, :relationship_status, :entries, :comments
+  attributes :id, :name, :email, :password, :username, :profile_image, :entries, :comments
 
   def comments
     ActiveModel::SerializableResource.new(object.comments,  each_serializer: CommentSerializer)
