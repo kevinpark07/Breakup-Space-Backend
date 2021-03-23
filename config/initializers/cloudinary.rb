@@ -1,7 +1,9 @@
+require './environment'
+
 Cloudinary.config do |config|    
-    config.cloud_name = "breakupspace"   
-    config.api_key = "389482419656888"   
-    config.api_secret = "Q3bd2IJW3IqBgXL_uLtNCacEBkE"   
+    config.cloud_name = CLOUD_NAME   
+    config.api_key = API_KEY   
+    config.api_secret = API_SECRET 
     config.secure = true    
     config.cdn_subdomain = true  
  end
