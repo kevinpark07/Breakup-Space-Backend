@@ -27,12 +27,13 @@ class UsersController < ApplicationController
 
     def update
         user = User.find(params[:id])
-        
-        if(params[:image])
-            profile_image = Cloudinary::Uploader.upload(params[:profile_image])
-            user.update(name: params[:name], email: params[:email], username: params[:username], password: params[:password], profile_image: profile_image["url"])
+
+        if(params[:profile_image] === "")
+            image = user.profile_image
+            user.update(name: params[:name], email: params[:email], username: params[:username], password: params[:password], profile_image: image)
         else
-            user.update(user_params)
+            image = Cloudinary::Uploader.upload(params[:profile_image])
+            user.update(name: params[:name], email: params[:email], username: params[:username], password: params[:password], profile_image: image["url"])
         end
 
         if user.save
